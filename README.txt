@@ -1,62 +1,187 @@
-Real Estate PHP - Panduan Setup
-================================
+Real Estate PHP - Panduan Setup & Menjalankan Aplikasi
+======================================================
 
-1) Persyaratan
-- PHP 7.2+ dengan mysqli, curl, dan GD enabled
-- MySQL 5.7+ (atau MariaDB equivalent)
-- Web server: Apache/Nginx dengan PHP enabled
-- Composer tidak diperlukan (plain PHP project)
+PANDUAN CEPAT SETUP LOCALHOST
+=============================
 
-2) Clone / Copy
-- Letakkan project di web root (contoh: /var/www/html/RealEstate-PHP)
-- Pastikan web server user dapat membaca/menulis ke folder upload jika diizinkan
+1. PERSYARATAN
+   - XAMPP / WAMP / MAMP / atau Laragon terinstall
+   - PHP 7.2+
+   - MySQL 5.7+
+   - Browser modern (Chrome, Firefox, Safari, Edge)
 
-3) Database
-- Buat database (contoh: realestatephp)
-- Import schema: DATABASE FILE/realestatephp.sql
-- Pastikan koneksi database sudah benar
+2. LANGKAH-LANGKAH SETUP
 
-4) Konfigurasi Koneksi Database
-- Edit config.php (root) dan admin/config.php
-  Atur DB_HOST, DB_USER, DB_PASS, DB_NAME sesuai environment Anda
+   A. Download dan Copy Project
+      1. Copy folder RealEstate-PHP ke folder htdocs
+         - XAMPP: C:\xampp\htdocs\RealEstate-PHP
+         - WAMP: C:\wamp\www\RealEstate-PHP
+         - MAMP: /Applications/MAMP/htdocs/RealEstate-PHP
+         - Laragon: C:\laragon\www\RealEstate-PHP
 
-5) Izin File (jika mengizinkan upload)
-- Buat folder upload writable: admin/property/, admin/upload/, images/user/
-  Contoh (Linux): chmod -R 775 admin/property admin/upload images/user
+   B. Setup Database
+      1. Buka phpmyadmin (biasanya http://localhost/phpmyadmin)
+      2. Buat database baru:
+         - Nama: realestatephp
+         - Collation: utf8mb4_unicode_ci
+      3. Pilih database yang baru dibuat
+      4. Klik "Import"
+      5. Browse file: DATABASE FILE/realestatephp.sql
+      6. Klik "Import" untuk menjalankan
 
-6) Akses Admin Panel
-- Admin panel tersedia di /admin
-- Kredensial default mungkin tercantum di "01 LOGIN DETAILS & PROJECT INFO.txt"
-  Ubah password segera setelah login pertama kali
+   C. Konfigurasi Database Connection
+      1. Buka file: config.php (di root folder)
+      2. Cari dan sesuaikan:
+         $host = "localhost";
+         $user = "root";         // username MySQL (biasanya 'root' untuk localhost)
+         $pass = "";             // password MySQL (kosong untuk localhost default)
+         $db = "realestatephp";  // nama database yang dibuat
 
-7) URL Frontend
-- Homepage: /index.php
-- Detail property: /propertydetail.php?pid={id}
-- Appointment: /contact_agent.php?pid={id}&aid={agent_id}
+      3. Buka file: admin/config.php
+      4. Lakukan konfigurasi yang sama seperti di atas
 
-8) Penjadwalan Appointment
-- User dapat menjadwalkan appointment dengan mengisi form di contact_agent.php
-- Konfirmasi akan dikirim ke WhatsApp user dan agent secara otomatis
-- Pastikan nomor telepon lengkap dengan kode negara
+   D. Start Server
+      1. Buka XAMPP/WAMP/Laragon Control Panel
+      2. Start Apache dan MySQL
+      3. Pastikan status "Running" untuk kedua service
 
-9) Menjalankan Lokal (Apache + PHP)
-- Enable virtual host yang mengarah ke folder project atau gunakan http://localhost/RealEstate-PHP
-- Pastikan mod_rewrite enabled jika Anda menambahkan rewrites (tidak wajib)
+3. AKSES APLIKASI
 
-10) Masalah Umum
-- Halaman kosong: aktifkan error reporting di php.ini atau set display_errors=On untuk debugging
-- Kesalahan koneksi DB: cek kembali kredensial di config.php
-- Kesalahan upload/permission: atur chmod/chown di folder upload
-- WhatsApp notification: pastikan nomor telepon format benar dengan kode negara
+   A. Halaman Utama
+      - URL: http://localhost/RealEstate-PHP/
+      - atau http://localhost/RealEstate-PHP/index.php
 
-11) Deployment Checklist
-- Atur izin file dengan benar (jangan 777 di production; gunakan 755/775)
-- Disable display_errors di production
-- Batasi akses ke admin/ dengan kredensial yang kuat
-- Konfigurasi HTTPS dan secure cookies untuk sessions
+   B. Admin Panel
+      - URL: http://localhost/RealEstate-PHP/admin/
+      - Username & Password: cek file "01 LOGIN DETAILS & PROJECT INFO.txt"
+      - PENTING: Ubah password admin setelah login pertama!
 
-12) Backup
-- Database: buat dump database secara berkala (mysqldump)
-- Upload: backup folder admin/property, admin/upload, images/user jika menyimpan media user
+   C. Halaman Login User
+      - URL: http://localhost/RealEstate-PHP/login.php
 
-Silakan sesuaikan path dan setting dengan environment Anda.
+4. FITUR UTAMA
+
+   A. Browse Properties
+      - Homepage menampilkan list properties
+      - Klik property untuk melihat detail
+
+   B. Schedule Appointment (Jadwal Janji Temu)
+      - Di halaman property detail
+      - Klik button "Schedule Appointment"
+      - Isi form dengan nama, email, nomor HP, tanggal & waktu
+      - Submit form
+      - Notifikasi WhatsApp akan dikirim ke user dan agent
+
+   C. Admin Panel
+      - Kelola properties (tambah, edit, hapus)
+      - Kelola users dan agents
+      - Kelola cities dan states
+      - Lihat appointment yang masuk
+
+5. TROUBLESHOOTING
+
+   A. Halaman Blank / Error 500
+      - Buka config.php
+      - Pastikan DB_HOST, DB_USER, DB_PASS, DB_NAME sudah benar
+      - Restart Apache & MySQL
+      - Cek console browser (F12 > Console)
+
+   B. Database Connection Error
+      - Pastikan MySQL sudah running
+      - Pastikan database "realestatephp" sudah dibuat
+      - Pastikan username/password di config.php benar
+
+   C. Halaman Admin Blank
+      - Cek file: admin/config.php
+      - Pastikan DB credentials sudah benar
+
+   D. Upload Gambar Gagal
+      - Buka folder: admin/property/
+      - Pastikan folder bisa ditulis (write permission)
+      - Untuk XAMPP: biasanya sudah otomatis bisa ditulis
+
+   E. Login Gagal
+      - Pastikan Anda menggunakan kredensial yang benar
+      - Cek file: "01 LOGIN DETAILS & PROJECT INFO.txt"
+      - Jika lupa password, reset via database (tanya admin)
+
+6. FITUR APPOINTMENT & WHATSAPP
+
+   - Ketika user submit form appointment, sistem otomatis mengirim:
+     * Konfirmasi ke WhatsApp user (nomor HP yang diisi di form)
+     * Notifikasi ke WhatsApp agent (nomor HP agent)
+   
+   - Pastikan:
+     * Nomor HP format benar (dengan kode negara, contoh: 62812345678)
+     * Koneksi internet aktif
+     * Endpoint API WhatsApp tersedia
+
+7. DATA DUMMY
+
+   - Database sudah include sample data (properties, users, agents)
+   - Gunakan untuk testing sebelum production
+   - Bisa ditambah/edit via admin panel
+
+8. DEFAULT CREDENTIALS (cek "01 LOGIN DETAILS & PROJECT INFO.txt")
+
+   Admin Login:
+   - Username: admin
+   - Password: [cek di file LOGIN DETAILS]
+
+   Test User:
+   - Bisa register akun baru via login.php > Register
+
+9. STRUKTUR FOLDER
+
+   RealEstate-PHP/
+   ├── admin/           (Admin panel & management)
+   ├── css/             (Stylesheet)
+   ├── fonts/           (Font files)
+   ├── images/          (Image assets)
+   ├── include/         (Header & footer templates)
+   ├── js/              (JavaScript files)
+   ├── webfonts/        (Web fonts)
+   ├── DATABASE FILE/   (SQL database file)
+   ├── config.php       (Database configuration)
+   ├── index.php        (Homepage)
+   ├── propertydetail.php  (Property detail page)
+   ├── contact_agent.php   (Appointment scheduling page)
+   └── ...other pages
+
+10. FILE PENTING
+
+    - config.php              : Database connection settings
+    - admin/config.php        : Admin database connection
+    - propertydetail.php      : Property detail & appointment button
+    - contact_agent.php       : Appointment scheduling form
+    - DATABASE FILE/realestatephp.sql : Database schema
+
+11. PERMISSIONS (Linux/Mac)
+
+    Jika folder upload tidak writable:
+    chmod -R 755 admin/property
+    chmod -R 755 admin/upload
+    chmod -R 755 images/user
+
+12. STOP SERVER
+
+    - Buka XAMPP/WAMP/Laragon Control Panel
+    - Klik "Stop" untuk Apache dan MySQL
+    - Atau tutup application sepenuhnya
+
+13. DEPLOYMENT UNTUK PRODUCTION
+
+    - Ubah DB credentials di config.php dengan production database
+    - Pastikan PHP error reporting disabled (display_errors = Off)
+    - Gunakan strong password untuk admin
+    - Setup HTTPS certificate
+    - Backup database secara berkala
+    - Monitor WhatsApp API endpoint availability
+
+SELESAI! Aplikasi sekarang siap dijalankan di localhost.
+
+Tips:
+- Jangan ubah struktur folder atau nama file utama
+- Backup database secara berkala jika ada data penting
+- Untuk production, gunakan environment terpisah dengan security lebih ketat
+- Pastikan nomor HP agent dan user lengkap untuk WhatsApp notification
