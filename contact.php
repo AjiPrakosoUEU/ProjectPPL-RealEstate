@@ -110,22 +110,22 @@ if(isset($_POST['send']))
                                 <li class="d-flex mb-4"> <i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>
                                     <div class="contact-address">
                                         <h5 class="text-white">Address</h5>
-                                        <span class="text-white">27 Ingram Street, Dayton</span> <br>
-										<span class="text-white">27 Ingram Street, Dayton</span>
+                                        <span class="text-white">Jl. Puri Indah Raya No. 12, Kembangan Jakarta Barat 11610</span> <br>
+										<span class="text-white"></span>
 										</div>
                                 </li>
                                 <li class="d-flex mb-4"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>
                                     <div class="contact-address">
                                         <h5 class="text-white">Call Us</h5>
-                                        <span class="d-table text-white">+1 234-567-8910</span>
-										<span class="text-white">+1 243-765-4321 </span>
+                                        <span class="d-table text-white">+62 878-8410-3737</span>
+										<span class="text-white">+62 878-8410-3636 </span>
 									</div>
                                 </li>
                                 <li class="d-flex mb-4"> <i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>
                                     <div class="contact-address">
                                         <h5 class="text-white">Email Adderss</h5>
-										<span class="d-table text-white">helpline@realestatest.com</span>
-										<span class="text-white">helpline@realestatest.com</span>
+										<span class="d-table text-white">nnusantaraberjanji@gmail.com</span>
+										<span class="text-white">nusantaraberjanji.service@gmail.com</span>
 										</div>
                                 </li>
                             </ul>

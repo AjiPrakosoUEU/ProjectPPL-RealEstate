@@ -7,7 +7,7 @@
                                 <div class="col-md-12 col-lg-4">
                                     <div class="footer-widget mb-4">
                                         <div class="footer-logo mb-4"> <a href="#"><img class="logo-bottom" src="images/logo/restatelg_white.png" alt="image"></a> </div>
-                                        <p class="pb-20 text-white">Risus commodo congue augue phasellus morbi hymenaeos ante tincidunt eu orci dictum bibendum lacus platea primis mi lacinia felis gravida natoque bibendum cubilia montes tristique et arcu blandit risus. Lobortis dignissim nam.</p>
+                                        <p class="pb-20 text-white">Nusantara Berjanji adalah platform properti yang membantu Anda menemukan hunian dan investasi terbaik dengan mudah, aman, dan terpercaya. Kami menyediakan berbagai pilihan properti berkualitas serta layanan profesional untuk memenuhi kebutuhan Anda.</p>
 										
                                         </div>
                                 </div>
@@ -39,10 +39,10 @@
                                             <div class="footer-widget">
                                                 <h4 class="widget-title text-white double-down-line-left position-relative">Contact Us</h4>
                                                 <ul class="text-white">
-                                                    <li class="hover-text-primary"><i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>27 Ingram Street, Dayton</li>
-                                                    <li class="hover-text-primary"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>+1 234-567-8910</li>
-													<li class="hover-text-primary"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>+1 243-765-4321</li>
-                                                    <li class="hover-text-primary"><i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>helpline@realestatest.com</li>
+                                                    <li class="hover-text-primary"><i class="fas fa-map-marker-alt text-white mr-2 font-13 mt-1"></i>Jakarta Barat, DKI Jakarta</li>
+                                                    <li class="hover-text-primary"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>+62 878-8410-3737</li>
+													<li class="hover-text-primary"> <i class="fas fa-phone-alt text-white mr-2 font-13 mt-1"></i>+62 878-8410-3636</li>
+                                                    <li class="hover-text-primary"><i class="fas fa-envelope text-white mr-2 font-13 mt-1"></i>nusantaraberjanji@gmail.com</li>
                                                 </ul>
                                             </div>
                                             <div class="footer-widget media-widget mt-4 text-white hover-text-primary"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fas fa-rss"></i></a> </div>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="row copyright">
-                    <div class="col-sm-6"> <span class="text-white">© <?php echo date('Y');?> Real Estate Website - Developed By Suraj Kumar Vishwakarma</span> </div>
+                    <div class="col-sm-6"> <span class="text-white">© <?php echo date('Y');?> </span> </div>
                     <div class="col-sm-6">
                         <ul class="line-menu text-white hover-text-primary float-right">
                             <li><a href="#">Privacy & Policy</a></li>

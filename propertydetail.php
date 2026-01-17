@@ -186,69 +186,29 @@ include("config.php");
                                     <img src="admin/property/<?php echo $row['27'];?>" alt="Not Available"> </div>
                             </div>
 
-                            <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Agent</h5>
-                            <div class="agent-contact pt-60">
-                                <div class="row">
-                                    <div class="col-sm-4 col-lg-3"> <img src="admin/user/<?php echo $row['uimage']; ?>" alt="" height="200" width="170"> </div>
-                                    <div class="col-sm-8 col-lg-9">
-                                        <div class="agent-data text-ordinary mt-sm-20">
-                                            <h6 class="text-success text-capitalize"><?php echo $row['uname'];?></h6>
-                                            <ul class="mb-3">
-                                                <li><?php echo $row['uphone'];?></li>
-                                                <li><?php echo $row['uemail'];?></li>
-                                            </ul>
-                                            
-                                            <div class="mt-3 text-secondary hover-text-success">
-                                                <ul>
-                                                    <li class="float-left mr-3"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                    <li class="float-left mr-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                    <li class="float-left mr-3"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                                    <li class="float-left mr-3"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                                    <li class="float-left mr-3"><a href="#"><i class="fas fa-rss"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- FOR MORE PROJECTS visit: codeastro.com -->
-                                </div>
-                            </div>
+                            <!-- FOR MORE PROJECTS visit: codeastro.com -->
                         </div>
                     </div>
 					
 					<?php } ?>
 					
                     <div class="col-lg-4">
-                        <!-- <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-md-50">Send Message</h4>
-                        <form method="post" action="#">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Phone">
-                                    </div>
-                                </div>
-								<div class="col-md-12">
-                                    <div class="form-group">
-										<textarea class="form-control" placeholder="Enter Message"></textarea>
-                                    </div>
-                                </div>
-								
-                                <div class="col-md-12">
-                                    <div class="form-group mt-4">
-                                        <button type="submit" class="btn btn-success w-100">Search Property</button>
-                                    </div>
-                                </div>
+                        <?php 
+                        // Get agent info for appointment
+                        $agent_query = mysqli_query($con,"SELECT user.uid, user.uname FROM `property`, `user` WHERE property.uid=user.uid AND pid='$id'");
+                        $agent_data = mysqli_fetch_array($agent_query);
+                        ?>
+                        
+                        <div class="bg-success p-4 rounded mb-4 text-center shadow-sm d-flex flex-column justify-content-center" style="margin-top: 1.7rem;">
+                            <div>
+                                <h5 class="text-white mb-3 font-weight-bold"><i class="fas fa-calendar-check"></i> Interested in This Property?</h5>
+                                <p class="text-white mb-4">Schedule an appointment with our agent now!</p>
+                                <a href="contact_agent.php?pid=<?php echo $id;?>&aid=<?php echo $agent_data['uid'];?>" class="btn btn-light btn-lg w-100 font-weight-bold">
+                                    <i class="fas fa-user-tie"></i> Schedule Appointment
+                                </a>
                             </div>
-                        </form> -->
+                        </div>
+                        
                         <h4 class="double-down-line-left text-secondary position-relative pb-4 my-4">Instalment Calculator</h4>
                         <form class="d-inline-block w-100" action="calc.php" method="post">
                             <label class="sr-only">Property Amount</label>

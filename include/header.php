@@ -4,8 +4,8 @@
                     <div class="row">
                         <div class="col-md-8">
                             <ul class="top-contact list-text-white  d-table">
-                                <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+1 243-765-4321</a></li>
-                                <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>codeastro@realestatest.com</a></li>
+                                <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+62 878-8410-3737</a></li>
+                                <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>nusantaraberjanji@gmail.com</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -62,7 +62,7 @@
                                     </ul>
                                     
 									
-									<a class="btn btn-success d-none d-xl-block" style="border-radius:30px;" href="submitproperty.php">Submit Peoperty</a> 
+									<a class="btn btn-success d-none d-xl-block" style="border-radius:30px;" href="submitproperty.php">Submit Property</a> 
                                 </div>
                             </nav>
                         </div>
