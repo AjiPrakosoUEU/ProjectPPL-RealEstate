@@ -38,7 +38,33 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `title`, `content`, `image`) VALUES
-(10, 'About Us', '<div id=\"pgc-w5d0dcc3394ac1-0-0\" class=\"panel-grid-cell\">\r\n<div id=\"panel-w5d0dcc3394ac1-0-0-0\" class=\"so-panel widget widget_sow-editor panel-first-child panel-last-child\" data-index=\"0\">\r\n<div class=\"so-widget-sow-editor so-widget-sow-editor-base\">\r\n<div class=\"siteorigin-widget-tinymce textwidget\">\r\n<p class=\"text_all_p_tag_css\">This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project.</p>\r\n<p class=\"text_all_p_tag_css\">This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project. (codeastro.com). This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project.</p>\r\n<div id=\"pgc-w5d0dcc3394ac1-0-0\" class=\"panel-grid-cell\">\r\n<div id=\"panel-w5d0dcc3394ac1-0-0-0\" class=\"so-panel widget widget_sow-editor panel-first-child panel-last-child\" data-index=\"0\">\r\n<div class=\"so-widget-sow-editor so-widget-sow-editor-base\">\r\n<div class=\"siteorigin-widget-tinymce textwidget\">\r\n<p class=\"text_all_p_tag_css\">This is a demo about us page for this project. This is a demo about us page for this project. This is a demo about us page for this project.</p>\r\n<p class=\"text_all_p_tag_css\">This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project. (codeastro.com) This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.This is a demo about us page for this project.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 'condos-pool.png');
+(
+  10,
+  'About',
+  '<div class="about-content">
+    <h2>Kepercayaan adalah Fondasi, Masa Depan adalah Tujuan.</h2>
+
+    <p>
+      Nusantara Berjanji Properti hadir sebagai jawaban atas kebutuhan masyarakat Indonesia
+      akan layanan properti yang transparan dan amanah. Kami memahami bahwa membeli properti
+      bukan sekadar transaksi materi, melainkan wujud dari janji Anda kepada keluarga untuk
+      masa depan yang lebih baik.
+    </p>
+
+    <p>
+      Kami membawa nama <strong>"Nusantara"</strong> sebagai kebanggaan akan jangkauan layanan
+      kami di tanah air, dan <strong>"Berjanji"</strong> sebagai nilai inti perusahaan kami.
+      Kami berkomitmen untuk selalu menepati janji dalam memberikan informasi yang jujur,
+      legalitas yang aman, dan kualitas hunian yang sesuai ekspektasi.
+    </p>
+
+    <blockquote>
+      “Rumah adalah tempat di mana janji masa depan dimulai.
+      Mari wujudkan janji tersebut bersama Nusantara Berjanji Properti.”
+    </blockquote>
+  </div>',
+  'condos-pool.png'
+);
 
 -- --------------------------------------------------------
 
